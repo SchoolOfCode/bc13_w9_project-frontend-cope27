@@ -13,9 +13,8 @@ function App() {
     </header>
     
     
-    
+    <SearchBar/>
     <CreatePost/>
-     <SearchBar/>
      <ProjectBoard/>
     </div>
   );

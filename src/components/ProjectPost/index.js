@@ -1,6 +1,7 @@
+import '../App/App.css'
 
 function ProjectPost({projectGoal, projectType, projectTools, userName}) {
-    return <div>
+    return <div className="projectPost">
     <header>
         <h3>{projectType}</h3>
     </header>
@@ -9,7 +10,7 @@ function ProjectPost({projectGoal, projectType, projectTools, userName}) {
 
         <div className="projectTools">The tools I want to use: {projectTools}</div>
 
-        <div classname="userName">Username: {userName}</div>
+        <div className="userName">Username: {userName}</div>
     </article>
 
 
