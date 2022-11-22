@@ -4,11 +4,11 @@ import '../App/App.css';
 function ProjectBoard() {
     return <div className="projectBoard">
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
 
        {/* <ProjectPost projectGoal="" projectType="" projectTools="" userName=""/>
         <ProjectPost projectGoal="" projectType="" projectTools="" userName=""/> */}
