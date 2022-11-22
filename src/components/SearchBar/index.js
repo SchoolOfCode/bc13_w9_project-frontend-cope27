@@ -1,4 +1,15 @@
-function SearchBar() {
+function SearchBar({posts}) {
+
+    function handleClick(){
+
+    }
+
+    /*
+    need to create a function that filters based on the categories search.
+    Proposal to limit filter function to the Post categories.
+    This link could be helpful https://contactmentor.com/filter-list-by-category-react-js/
+    */
+
     return <div className="searchBar">
         <label for="categories">I want to:</label>
         <select name="categories" id="categories">
@@ -22,7 +33,7 @@ function SearchBar() {
             <label for="vehicle3">SQL</label>
             <input type="checkbox" id="react" name="react" value="react"/>
             <label for="vehicle3">React</label>
-        <button>Find me a seed</button>
+        <button onClick={handleClick}>Find me a seed</button>
     </div>
 }
 export default SearchBar;

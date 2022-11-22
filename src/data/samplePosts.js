@@ -1,3 +1,5 @@
+// projectTools will need to be an array
+
 const samplePosts = [
     {
         id: 1,
@@ -27,7 +29,7 @@ const samplePosts = [
         id: 4,
         userName: 'McLovin-0147',
         projectGoal: 'Dating app',
-        projectType: 'Pair Programming',
+        projectType: 'Pair',
         projectTools: 'JavaScript',
         collaborators: 1
     },
@@ -45,6 +47,14 @@ const samplePosts = [
         projectGoal: 'Find my Car minigame app',
         projectType: 'Build',
         projectTools: 'JavaScript',
+        collaborators: 1
+    },
+    {
+        id: 7,
+        userName: 'Craig',
+        projectGoal: "All I want for my birthday is my voice back",
+        projectType: 'Build',
+        projectTools: 'React',
         collaborators: 1
     }
 ]
