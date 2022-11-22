@@ -56,6 +56,14 @@ const samplePosts = [
         projectType: 'Build',
         projectTools: 'React',
         collaborators: 1
+    },
+    {
+        id: 8,
+        userName: 'Steph',
+        projectGoal: "Make awesome UI",
+        projectType: 'Pair',
+        projectTools: 'CSS',
+        collaborators: 2
     }
 ]
 
