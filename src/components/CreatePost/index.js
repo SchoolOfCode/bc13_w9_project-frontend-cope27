@@ -1,7 +1,32 @@
-import React from "react";
+//import React from "react";
 import '../App/App.css'
+import { useState } from 'react';
+
+//Goal: be able to send input data as a data object up to main App level
+    // useState for username input (name, setName) = initial state- empty string DONE
+    // additional: useState for object ? (for broader input)
+
+    // function- handle change of input DONE 
+
+// need handleclick function for submit button (sendPost)
+    // handleclick (like onChange- listening for event)
+    // create event listener (handleSubmit)
+        //connect the handleSubmit to the submit button 
+        // unique keys- on list for later 
+
 
 function CreatePost() {
+    const [userName, setUserName] = useState('');
+    const [postObject, setPostObject] = useState({id: 1, userName: '', projectGoal: '', projectType: '', projectTools: '', collaborators: 1});
+
+    function handleUsername (e) {
+        setUserName(e.target.value); //the function that's called when event listener happens (onChange)
+    };
+
+    function handleSubmit() {
+        setPostObject({id: 1, userName: userName, projectGoal: '', projectType: '', projectTools: '', collaborators: 1})
+    }
+
     return <div className="createPost">
         <label for="categories">Plant a Seed:</label>
         <select name="categories" id="categories">
@@ -21,9 +46,9 @@ function CreatePost() {
             <option value="SQL">SQL</option>
             </select><br />
 
-        <label>Username: </label><input type="text"></input><br/>
+        <label>Username: </label><input type="text" onChange={handleUsername}></input><br/>
 
-        <button>SUBMIT</button>
+        <button onClick={handleSubmit}>SUBMIT</button>
     </div>
 }
 export default CreatePost;
