@@ -17,14 +17,14 @@ import { useState } from 'react';
 
 function CreatePost() {
     const [userName, setUserName] = useState('');
-    const [postObject, setPostObject] = useState({id: 1, userName: '', projectGoal: '', projectType: '', projectTools: '', collaborators: 1});
+    const [postObject, setPostObject] = useState({id: 20, username: '', projectgoal: '', projecttype: '', projecttools: '', collaborators: 1});
 
     function handleUsername (e) {
         setUserName(e.target.value); //the function that's called when event listener happens (onChange)
     };
 
     function handleSubmit() {
-        setPostObject({id: 1, userName: userName, projectGoal: '', projectType: '', projectTools: '', collaborators: 1})
+        setPostObject({id: 20, username: userName, projectGoal: '', projectType: '', projectTools: '', collaborators: 1})
     }
 
     return <div className="createPost">
