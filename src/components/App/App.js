@@ -10,6 +10,13 @@ function App() {
   // create state and import samplePosts as initial state
   const [posts, setPosts] = useState(samplePosts); 
 
+  // on handleSubmit we wil have a function that spreads out the previous array of postObjects and append the new object
+  function handleSubmit(postObject) {
+    console.log('You clicked me!');
+    setPosts([...posts, postObject])
+    console.log(postObject)
+  }
+
   return (
     <div className="App">
     <header>
@@ -19,7 +26,7 @@ function App() {
     
     
     <SearchBar posts={posts} setPosts={setPosts}/>
-    <CreatePost posts={posts} setPosts={setPosts}/>
+    <CreatePost handleSubmit={handleSubmit}/>
     <ProjectBoard posts={posts}/>
     </div>
   );
