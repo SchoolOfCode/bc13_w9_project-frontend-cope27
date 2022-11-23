@@ -34,6 +34,7 @@ function App() {
     //const data = await post.json();
    }
    createAPost();
+   console.log('useEffect has worked')
   }, [])
 
   //JSON.stringify(posts[-1])
