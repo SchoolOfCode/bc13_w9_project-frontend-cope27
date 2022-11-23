@@ -43,9 +43,9 @@ function CreatePost({handleSubmit}) {
     return <div className="createPost">
         <label for="categories">Plant a Seed:</label>
         <select name="categories" id="categories" onChange={handleProjectType}>
-            <option value="build">build</option>
-            <option value="study">study</option>
-            <option value="pair">pair</option>
+            <option value="Build">Build</option>
+            <option value="Study">Study</option>
+            <option value="Pair">Pair</option>
         </select><br/>
 
         <label>Project Goal</label>
