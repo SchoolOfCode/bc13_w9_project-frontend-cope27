@@ -16,7 +16,7 @@ import { useState } from 'react';
 
 
 
-function CreatePost({handleSubmit}) {
+function CreatePost({handleSubmit, trigger, setTrigger}) {
     // const [userName, setUserName] = useState('');
     const [postObject, setPostObject] = useState({id: 20, username: '', projectgoal: '', projecttype: '', projecttools: '', collaborators: 1});
 
@@ -38,37 +38,41 @@ function CreatePost({handleSubmit}) {
         setPostObject({...postObject, projecttype: e.target.value});
     }
 
-
-
     function handleProjectTools (e) {
         setPostObject({...postObject, projecttools: e.target.value});
 
     }
 
-    return <div className="createPost">
-        <label for="categories">Plant a Seed:</label>
-        <select name="categories" id="categories" onChange={handleProjectType}>
-            <option value="Build">Build</option>
-            <option value="Study">Study</option>
-            <option value="Pair">Pair</option>
-        </select><br/>
+    return (trigger) ? ( 
+    <div className="createPost">
+        <div className="popup-inner">
+            <h2>Where would you like to grow?</h2>
+            <label for="categories">Plant a Seed:</label>
+            <select name="categories" id="categories" onChange={handleProjectType}>
+                <option value="Build">Build</option>
+                <option value="Study">Study</option>
+                <option value="Pair">Pair</option>
+            </select><br/>
 
-        <label>Project Goal</label>
-        <input type="text" onChange={handleProjectGoal}></input><br/>
-        <label for="Tools">Tool I'll be using</label>
-        <select name="Tools" id="Tools" onChange={handleProjectTools}>
-            <option value="CSS">CSS</option>
-            <option value="HTML">HTML</option>  
-            <option value="JavaScript">JavaScript</option>
-            <option value="Node">Node.js</option>
-            <option value="React">React</option>
-            <option value="SQL">SQL</option>
-            </select><br />
+            <label>Project Goal</label>
+            <input type="text" onChange={handleProjectGoal}></input><br/>
+            <label for="Tools">Tool I'll be using</label>
+            <select name="Tools" id="Tools" onChange={handleProjectTools}>
+                <option value="CSS">CSS</option>
+                <option value="HTML">HTML</option>  
+                <option value="JavaScript">JavaScript</option>
+                <option value="Node">Node.js</option>
+                <option value="React">React</option>
+                <option value="SQL">SQL</option>
+                </select><br />
 
-        <label>Username: </label><input type="text" onChange={handleUsername}></input><br/>
+            <label>Username: </label><input type="text" onChange={handleUsername}></input><br/>
 
-        <button onClick={() => handleSubmit(postObject)}>SUBMIT</button>
+            <button onClick={() => handleSubmit(postObject)}>SUBMIT</button><br />
+            <button className="close-btn" onClick={() => setTrigger(false)}>Cancel</button>
+        </div>
     </div>
+) : "";
 }
 export default CreatePost;
 

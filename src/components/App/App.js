@@ -4,13 +4,13 @@ import SearchBar from '../SearchBar/index.js'
 import ProjectBoard from '../ProjectBoard/index.js'
 import { useState, useEffect } from 'react';
 import samplePosts from '../../data/samplePosts';
+import logo from '../../sjardin-logo-green.svg'
 //import cors from 'cors';
 
 
 function App() {
   const [posts, setPosts] = useState(samplePosts); //empty this state when switching to live database 
-  // Create Routes for GET ALL (on page load)
-    // GET all the current projects from project board 
+  const [buttonPopup, setButtonPopup] = useState(false);
   
   useEffect(() => {
     async function getAllposts() {
@@ -59,13 +59,20 @@ function App() {
   return (
     <div className="App">
     <header>
-    <h1 className="title">Sjardin</h1>
+    <div className="logo">
+      <img id="standard-green-logo" src={logo} alt='Sjardin-logo' />
+    </div>
+    {/* <h1 className="title">Sjardin</h1> */}
     <p className="slogan">A collaboration app for learning to code together</p>
     </header>
     
-    
-    <SearchBar posts={posts} setPosts={setPosts}/>
-    <CreatePost handleSubmit={handleSubmit}/>
+    <button onClick={() => setButtonPopup(true)}>
+      Create Post
+    </button>
+    <div className="navbar">
+      <CreatePost handleSubmit={handleSubmit} trigger={buttonPopup} setTrigger={setButtonPopup}/>
+      <SearchBar posts={posts} setPosts={setPosts}/>
+    </div>
     <ProjectBoard posts={posts}/>
     </div>
   );
