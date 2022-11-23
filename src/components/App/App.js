@@ -4,6 +4,8 @@ import SearchBar from '../SearchBar/index.js'
 import ProjectBoard from '../ProjectBoard/index.js'
 import { useState, useEffect } from 'react';
 import samplePosts from '../../data/samplePosts';
+//import cors from 'cors';
+
 
 function App() {
   const [posts, setPosts] = useState(samplePosts); //empty this state when switching to live database 
@@ -22,12 +24,19 @@ function App() {
 
   useEffect(() => {
    async function createAPost() {
-    const post = await fetch("http://localhost:3005/api/posts", {method: "POST", headers: {"Content-Type": "application/json",}, body: JSON.stringify(posts[-1])});
+    const post = await fetch("http://localhost:3005/api/posts", {method: "POST", headers: {"Content-Type": "application/json",}, body: {
+      "userName": "Steph",
+      "projectGoal": "Build an API for helping people",
+      "projectType": "Build",
+      "projectTools": "Express",
+      "collaborators": "4"
+  } });
     //const data = await post.json();
-
    }
    createAPost();
-  }, [posts])
+  }, [])
+
+  //JSON.stringify(posts[-1])
 
 
   // Create Route (POST) for creating a new post 

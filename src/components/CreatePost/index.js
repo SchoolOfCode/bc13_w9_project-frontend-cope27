@@ -24,24 +24,24 @@ function CreatePost({handleSubmit}) {
     function handleUsername (e) {
         // setUserName(e.target.value); //the function that's called when event listener happens (onChange)
         console.log(e.target.value)
-        setPostObject({...postObject, userName: e.target.value})
+        setPostObject({...postObject, username: e.target.value})
     }; 
 
     function handleProjectGoal (e) {
         console.log(e.target.value);
-        setPostObject({...postObject, projectGoal: e.target.value});
+        setPostObject({...postObject, projectgoal: e.target.value});
     };
     // function handleSubmit() {
     //     setPostObject({id: 1, userName: userName, projectGoal: '', projectType: '', projectTools: '', collaborators: 1})
     // }
     function handleProjectType (e) {
-        setPostObject({...postObject, projectType: e.target.value});
+        setPostObject({...postObject, projecttype: e.target.value});
     }
 
 
 
     function handleProjectTools (e) {
-        setPostObject({...postObject, projectTools: e.target.value});
+        setPostObject({...postObject, projecttools: e.target.value});
 
     }
 
