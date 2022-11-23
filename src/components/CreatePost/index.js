@@ -11,8 +11,6 @@ function CreatePost() {
         </select><br/>
 
         <label>Project Goal</label><input type="text"></input><br/>
-    {/* edit html here
-    edit data insertion in the js */}
         <label for="Tools">Tool I'll be using</label>
         <select name="Tools" id="Tools">
             <option value="CSS">CSS</option>
