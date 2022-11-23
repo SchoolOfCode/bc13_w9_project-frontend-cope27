@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
     <header>
-    <h1>Sjardin</h1>
-    <p>A collaboration app for learning to code together</p>
+    <h1 className="title">Sjardin</h1>
+    <p className="slogan">A collaboration app for learning to code together</p>
     </header>
     
     

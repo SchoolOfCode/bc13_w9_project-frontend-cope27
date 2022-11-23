@@ -23,8 +23,11 @@ function ProjectBoard({posts}) {
 
         {/* <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
         <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/> */}
 
