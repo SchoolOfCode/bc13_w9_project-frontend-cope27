@@ -15,9 +15,11 @@ import { useState } from 'react';
         // unique keys- on list for later 
 
 
+
 function CreatePost({handleSubmit}) {
     // const [userName, setUserName] = useState('');
-    const [postObject, setPostObject] = useState({id: 1, userName: '', projectGoal: '', projectType: '', projectTools: '', collaborators: 1});
+    const [postObject, setPostObject] = useState({id: 20, username: '', projectgoal: '', projecttype: '', projecttools: '', collaborators: 1});
+
 
     function handleUsername (e) {
         // setUserName(e.target.value); //the function that's called when event listener happens (onChange)
@@ -36,8 +38,11 @@ function CreatePost({handleSubmit}) {
         setPostObject({...postObject, projectType: e.target.value});
     }
 
+
+
     function handleProjectTools (e) {
         setPostObject({...postObject, projectTools: e.target.value});
+
     }
 
     return <div className="createPost">

@@ -14,25 +14,26 @@ function ProjectBoard({posts}) {
         }
 
         {posts.map( (post) => 
-        <ProjectPost projectGoal={post.projectGoal} projectType={post.projectType} 
-            projectTools={post.projectTools} userName = {post.userName}/>
+        <ProjectPost projectgoal={post.projectgoal} projecttype={post.projecttype} 
+            projecttools={post.projecttools} username = {post.username}/>
             )
         }
 
+
         
 
-        {/* <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08" background-color="#CAB39F"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projectType="Build" projectTools="React" userName="Jimmy08"/> */}
+        {/* <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08" background-color="#CAB39F"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08" background-color="#CAB39F"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08" background-color="#CAB39F"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
+        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/> */}
 
-       {/* <ProjectPost projectGoal="" projectType="" projectTools="" userName=""/>
-        <ProjectPost projectGoal="" projectType="" projectTools="" userName=""/> */}
+       {/* <ProjectPost projectGoal="" projecttype="" projecttools="" username=""/>
+        <ProjectPost projectGoal="" projecttype="" projecttools="" username=""/> */}
     </div>
 }
 export default ProjectBoard;  
@@ -40,11 +41,17 @@ export default ProjectBoard;
 /*
 {
         id: 1,
-        userName: 'Jimmy08',
+        username: 'Jimmy08',
         projectGoal: 'Lord of the Rings API',
-        projectType: 'Build',
-        projectTools: 'React',
+        projecttype: 'Build',
+        projecttools: 'React',
         collaborators: 1
     },
+
+     {posts.map( (post) => 
+        <ProjectPost projectGoal={post.projectGoal} projecttype={post.projecttype} 
+            projecttools={post.projecttools} username = {post.username}/>
+            )
+        }
 
     */

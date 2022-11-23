@@ -1,16 +1,16 @@
 import '../App/App.css'
 
-function ProjectPost({projectGoal, projectType, projectTools, userName}) {
+function ProjectPost({projectgoal, projecttype, projecttools, username}) {
     return <div className="projectPost">
     <header>
-        <h3>{projectType}</h3>
+        <h3>{projecttype}</h3>
     </header>
     <article>
-        <div className="projectGoal">Project Title: {projectGoal}</div>
+        <div className="projectgoal">Project Title: {projectgoal}</div>
 
-        <div className="projectTools">The tools I want to use: {projectTools}</div>
+        <div className="projecttools">The tools I want to use: {projecttools}</div>
 
-        <div className="userName">Username: {userName}</div>
+        <div className="username">username: {username}</div>
     </article>
 
 
