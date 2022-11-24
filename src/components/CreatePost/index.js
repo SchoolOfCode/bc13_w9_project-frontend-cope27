@@ -68,7 +68,9 @@ function CreatePost({handleSubmit, trigger, setTrigger}) {
 
             <label>Username: </label><input type="text" onChange={handleUsername}></input><br/>
 
-            <button onClick={() => handleSubmit(postObject)}>SUBMIT</button><br />
+            <button onClick={() => {
+                handleSubmit(postObject) 
+                setTrigger(false)}}>SUBMIT</button><br />
             <button className="close-btn" onClick={() => setTrigger(false)}>Cancel</button>
         </div>
     </div>
