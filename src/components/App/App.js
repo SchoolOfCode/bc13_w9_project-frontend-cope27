@@ -4,7 +4,7 @@ import SearchBar from '../SearchBar/index.js'
 import ProjectBoard from '../ProjectBoard/index.js'
 import { useState, useEffect } from 'react';
 import samplePosts from '../../data/samplePosts';
-import logo from '../../sjardin-logo-green.svg'
+import logo from '../../sjardin-logo-css.svg'
 //import cors from 'cors';
 
 
@@ -97,8 +97,8 @@ function App() {
     {/* <h1 className="title">Sjardin</h1> */}
     <p className="slogan">A collaboration app for learning to code together</p>
     </header>
-    <div>
-    <button className="create-button" onClick={() => setButtonPopup(true)}>
+    <div className="createButtonContainer">
+    <button id="create-button" onClick={() => setButtonPopup(true)}>
       Create Post
     </button>
 

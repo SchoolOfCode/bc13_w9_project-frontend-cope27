@@ -14,7 +14,7 @@ function SearchBar({posts}) {
 
         <label htmlFor="categories">I want to </label>
 
-        <select className="categoriesBar" name="categories" id="categories">
+        <select name="categories" id="categories">
             <option value="build">build</option>
             <option value="study">study</option>
             <option value="pair">pair</option>
@@ -23,8 +23,6 @@ function SearchBar({posts}) {
         <br/>
         <label> using...</label>
         <br/>
-        <br/>
-
             <input type="checkbox" id="css" name="css" value="css"/>
 
             <label htmlFor="css">CSS</label><br/>
@@ -39,9 +37,10 @@ function SearchBar({posts}) {
             <input type="checkbox" id="sql" name="sql" value="sql"/>
             <label htmlFor="vehicle3">SQL</label><br/>
             <input type="checkbox" id="react" name="react" value="react"/>
-            <label htmlFor="vehicle3">React</label>
-        <div ><br/>
-            <button className="searchButton" onClick={handleClick}>Find me a buddy</button>
+            <label htmlFor="vehicle3">React</label><br/>
+        <div>
+        <br/>
+        <button className="searchButton" onClick={handleClick}>Find me a buddy</button>
         </div>
         <br/>
     </div>

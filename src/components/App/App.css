@@ -4,8 +4,14 @@
 
 /* text-align: center; */
 
+.createButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 30px 0;
+}
 
-.create-button {
+#create-button {
   text-align: center;
   justify-content: center;
   font-size: 16px;
@@ -78,7 +84,7 @@
 .searchBar{
   background-color: #F6AE2D;
   align-items: center;
-  width:200px;
+  width:600px;
   align-items: left;
   border: 3px solid;
   padding: 0.25em 0.5em;
@@ -103,21 +109,8 @@
   touch-action: manipulation;
 }
 
-.popup-inner .submitButton {
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #000;
-  cursor: pointer;
-  border: 3px solid;
-  padding: 0.25em 0.5em;
-  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
-  position: relative;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
+
+
 
 .categoriesBar {
   font-family: helvetica;
@@ -160,6 +153,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-size: 30px;
+  color: #000;
+  border-style: solid;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  margin: 10px;
+  padding: 0.25em 0.5em;
+  font-family: helvetica;
+}
+
+/* .projectType {
+  color: #6E4555;
+  font-family: 
+} */
+
+
+
+/* 
+background-color: #F6AE2D;
+  min-height: 30vh;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #000;
   border-style: solid;
@@ -167,7 +186,7 @@
   padding: 0.25em 0.5em;
   border-radius: 25%;
   font-family: helvetica;
-}
+*/
 
 
 /* .projectType 
@@ -193,13 +212,37 @@
 
 .popup-inner {
   position: relative;
-  padding: 32px;
+  padding: 20px 50px 50px 50px;
   width: 100%;
   opacity: 1;
   max-width: 640px;
   background-color: #F6AE2D;
-  
+  border: 3px solid;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
 }
+
+.projectContent {
+  font-size: 20px;
+  margin: 0 0 20px 0;
+}
+
+.popup-inner .submitButton {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: absolute;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  bottom: 16px;
+}
+
 
 .popup-inner .close-btn {
   position: absolute;
