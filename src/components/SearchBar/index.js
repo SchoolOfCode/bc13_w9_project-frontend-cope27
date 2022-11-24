@@ -11,7 +11,7 @@ function SearchBar({posts}) {
     */
 
     return <div className="searchBar">
-        <label for="categories">I want to:</label>
+        <label for="categories">I want to</label>
         <select name="categories" id="categories">
             <option value="build">build</option>
             <option value="study">study</option>
