@@ -3,6 +3,7 @@ import App from './App';
 import CreatePost from '../CreatePost/index'
 import ProjectBoard from '../ProjectBoard/index'
 import SearchBar from '../SearchBar/index'
+import userEvent from '@testing-library/user-event';
 
 // test('renders learn react link', () => {
 //   render(<App />);
@@ -16,7 +17,19 @@ p tag text
 button with text
 three components, CreatePost, ProjectBoard and SearchBar
 */
+  
 
+it('find a button', () => {
+  const {getByText, container, debug} = render(<App />)
+  const createPostButton = getByText("Create Post");
+
+  console.log(container.innerHTML);
+
+  //const image = screen.getByRole('img');
+  expect(createPostButton).toBeInTheDocument();
+  //expect(image).toBeVisible();
+
+});
 
 test('that each element renders on the screen', () => {
   render(<App />)
@@ -49,14 +62,24 @@ test('the text in paragraph again', () => {
 
 
 
-// test('test that each button renders on the screen', () => {
-//   render(<App />)
+test('test that each button renders on the screen', () => {
+  render(<App />)
 
-//   const button = screen.getByRole('button', {name:''});
-//   expect(button).toBeInTheDocument();
-//   expect(button).toBeVisible();
+  const button = screen.getByRole('button', {name:/Create Post/i});
+  expect(button).toBeInTheDocument();
+  expect(button).toBeVisible();
 
-// });
+});
+
+test('that button click calls the createPost function', ()=> {
+  render(<App />)
+
+  const button = screen.getByRole('button', {name:/Create Post/i});
+  userEvent.click(button);
+
+})
+
+
 
 // test('that the paragraph of text renders and contains the right text', () => {
 //   render(<App />)
