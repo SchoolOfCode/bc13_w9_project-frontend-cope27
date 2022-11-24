@@ -26,17 +26,17 @@ function App() {
 
    
 
-   async function createAPost() {
-    const tempBody = {
-      username: "te39248394",
-      projectgoal: "sdfdsfsdfThing",
-      projecttype: "Build",
-      projecttools: "SQL",
-      collaborators: 123
-    };
+   async function createAPost(posts) {
+    // const tempBody = {
+    //   username: "te39248394",
+    //   projectgoal: "sdfdsfsdfThing",
+    //   projecttype: "Build",
+    //   projecttools: "SQL",
+    //   collaborators: 123
+    // };
 
     // we need an alternative way of getting the created post
-    const tempObject = posts[posts.length-1];
+    const postObject = posts[posts.length-1];
 
 
 
@@ -47,7 +47,7 @@ function App() {
       headers: {
         "Content-Type": "application/json",
       }, 
-      body: JSON.stringify(tempObject)
+      body: JSON.stringify(postObject)
     }
     );
     if (post.success) {
@@ -55,9 +55,10 @@ function App() {
     }
     //const data = await post.json();
    }
-   createAPost();
+   createAPost(posts);
    console.log('CreateAPost useEffect has worked')
-  }, [])
+   // THIS DEPENDENCY DOES NOT WORK ON A DELETE REQUEST
+  }, [posts])
 
   //JSON.stringify(posts[-1])
 
