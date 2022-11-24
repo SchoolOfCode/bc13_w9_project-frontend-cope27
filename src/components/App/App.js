@@ -97,17 +97,22 @@ function App() {
     {/* <h1 className="title">Sjardin</h1> */}
     <p className="slogan">A collaboration app for learning to code together</p>
     </header>
-    <div className="create-button">
-    <button onClick={() => setButtonPopup(true)}>
+    <div>
+    <button className="create-button" onClick={() => setButtonPopup(true)}>
       Create Post
     </button>
+
     </div>
     <div className="navbar">
-      <CreatePost handleSubmit={handleSubmit} trigger={buttonPopup} setTrigger={setButtonPopup}/>
       <SearchBar posts={posts} setPosts={setPosts}/>
     </div>
+    <div>
     <ProjectBoard posts={posts}/>
+    
     </div>
+    <div><CreatePost handleSubmit={handleSubmit} trigger={buttonPopup} setTrigger={setButtonPopup}/></div>
+    </div>
+    
   );
 }
 
