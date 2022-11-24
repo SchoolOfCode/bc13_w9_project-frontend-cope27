@@ -8,34 +8,63 @@ import logo from '../../sjardin-logo-green.svg'
 //import cors from 'cors';
 
 
-function App() {
-  const [posts, setPosts] = useState(samplePosts); //empty this state when switching to live database 
-  const [buttonPopup, setButtonPopup] = useState(false);
-  
-  // useEffect(() => {
-  //   async function getAllposts() {
-  //    let response = await fetch("http://localhost:3005/api/posts", {method: "GET", headers: {"Content-Type": "application/json",}});
-  //    let data = await response.json();
-  //    (console.log(data))
-  //    setPosts(data.payload);
-  //   }
-  //   getAllposts();
-  // }, []);
+// when handleSubmit runs, set toggle to true 
+// use if condition in useEffect
+// when useEffect ends, set toggle to false
 
-  // useEffect(() => {
-  //  async function createAPost() {
-  //   const post = await fetch("http://localhost:3005/api/posts", {method: "POST", headers: {"Content-Type": "application/json",}, body: {
-  //     "userName": "Steph",
-  //     "projectGoal": "Build an API for helping people",
-  //     "projectType": "Build",
-  //     "projectTools": "Express",
-  //     "collaborators": "4"
-  // } });
-  //   //const data = await post.json();
-  //  }
-  //  createAPost();
-  //  console.log('useEffect has worked')
-  // }, [])
+
+
+function App() {
+  //const [posts, setPosts] = useState(samplePosts); //empty this state when switching to live database 
+  const [posts, setPosts] = useState([]);
+  const [buttonPopup, setButtonPopup] = useState(false);
+  const [newPost, setNewPost] = useState({});
+  const [toggle, setToggle] = useState(false);
+  
+  useEffect(() => {
+    async function getAllposts() {
+     let response = await fetch("http://localhost:3005/api/posts", {mode: "cors", method: "GET", headers: {"Content-Type": "application/json",}});
+     let data = await response.json();
+  
+     setPosts([...data.payload]);
+     (console.log("The data loaded: ", data))
+     console.log("The posts state: ", posts)
+    }
+    getAllposts();
+  }, []);
+
+  useEffect(() => {
+
+  if (toggle){
+    async function createAPost(newPost) {
+      console.log("useEffect postObject from state: ", newPost)
+      const post = await fetch("http://localhost:3005/api/posts", 
+        {
+          method: "POST", 
+          mode: "cors",
+          headers: {
+            "Content-Type": "application/json",
+          }, 
+          body: JSON.stringify(newPost)
+        }
+      );
+
+      if (post.success) {
+        console.log("Post was success");    
+      }
+      setPosts([...posts, newPost])
+      //const data = await post.json();
+    }
+
+    createAPost(newPost);
+    console.log('CreateAPost useEffect has worked')
+    setToggle(false);
+  } else {
+    console.log("Toggle is false! Hahah.");
+  }
+    // THIS DEPENDENCY DOES NOT WORK ON A DELETE REQUEST
+  }, [newPost])
+
 
   //JSON.stringify(posts[-1])
 
@@ -51,9 +80,12 @@ function App() {
 
   // on handleSubmit we wil have a function that spreads out the previous array of postObjects and append the new object
   function handleSubmit(postObject) {
-    console.log('You clicked me!');
-    setPosts([...posts, postObject])
-    console.log(postObject)
+    console.log('You clicked postObject');
+    setToggle(true);
+    setNewPost(postObject);
+
+    //setPosts([...posts, postObject])
+    console.log("handleSubmit postObject: ", postObject)
   }
 
   return (

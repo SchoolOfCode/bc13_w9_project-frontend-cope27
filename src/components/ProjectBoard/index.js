@@ -15,7 +15,7 @@ function ProjectBoard({posts}) {
 
         {posts.map( (post) => 
         <ProjectPost projectgoal={post.projectgoal} projecttype={post.projecttype} 
-            projecttools={post.projecttools} username = {post.username}/>
+            projecttools={post.projecttools} username = {post.username} key={post.id}/>
             )
         }
 

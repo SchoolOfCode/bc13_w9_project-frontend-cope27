@@ -47,7 +47,7 @@ function CreatePost({handleSubmit, trigger, setTrigger}) {
     <div className="createPost">
         <div className="popup-inner">
             <h2>Where would you like to grow?</h2>
-            <label for="categories">Plant a Seed:</label>
+            <label htmlFor="categories">Plant a Seed:</label>
             <select name="categories" id="categories" onChange={handleProjectType}>
                 <option value="Build">Build</option>
                 <option value="Study">Study</option>
@@ -56,7 +56,7 @@ function CreatePost({handleSubmit, trigger, setTrigger}) {
 
             <label>Project Goal</label>
             <input type="text" onChange={handleProjectGoal}></input><br/>
-            <label for="Tools">Tool I'll be using</label>
+            <label htmlFor="Tools">Tool I'll be using</label>
             <select name="Tools" id="Tools" onChange={handleProjectTools}>
                 <option value="CSS">CSS</option>
                 <option value="HTML">HTML</option>  
