@@ -1,8 +1,13 @@
-/* .App {
-  text-align: center;
-  background-color: #344E41;
+.App {
+  background-color: #f6ae2d;
 }
- */
+
+/* text-align: center; */
+
+.create-button {
+  text-align: center;
+  justify-content: center;
+}
 
 .title {
   color: #34623F;
@@ -11,12 +16,14 @@
   font-size: 78px
 }
 
+/* Change Sjardin logo */
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Welcome message P-tag */
 .slogan {
   color: black;
   text-align: center;
@@ -24,16 +31,20 @@
   font-size: 24px;
 }
 
+/* changes searchbar */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* font style, spacing, color, button elements */
 .searchBar{
-  background-color: #34623F;
+  background-color: #F97068;
   align-items: center;
-  padding: 20px;
+  width:200px;
+  padding:20px;
+  align-items: left;
 }
 
 .createPost {
