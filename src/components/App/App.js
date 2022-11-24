@@ -12,30 +12,30 @@ function App() {
   const [posts, setPosts] = useState(samplePosts); //empty this state when switching to live database 
   const [buttonPopup, setButtonPopup] = useState(false);
   
-  useEffect(() => {
-    async function getAllposts() {
-     let response = await fetch("http://localhost:3005/api/posts", {method: "GET", headers: {"Content-Type": "application/json",}});
-     let data = await response.json();
-     (console.log(data))
-     setPosts(data.payload);
-    }
-    getAllposts();
-  }, []);
+  // useEffect(() => {
+  //   async function getAllposts() {
+  //    let response = await fetch("http://localhost:3005/api/posts", {method: "GET", headers: {"Content-Type": "application/json",}});
+  //    let data = await response.json();
+  //    (console.log(data))
+  //    setPosts(data.payload);
+  //   }
+  //   getAllposts();
+  // }, []);
 
-  useEffect(() => {
-   async function createAPost() {
-    const post = await fetch("http://localhost:3005/api/posts", {method: "POST", headers: {"Content-Type": "application/json",}, body: {
-      "userName": "Steph",
-      "projectGoal": "Build an API for helping people",
-      "projectType": "Build",
-      "projectTools": "Express",
-      "collaborators": "4"
-  } });
-    //const data = await post.json();
-   }
-   createAPost();
-   console.log('useEffect has worked')
-  }, [])
+  // useEffect(() => {
+  //  async function createAPost() {
+  //   const post = await fetch("http://localhost:3005/api/posts", {method: "POST", headers: {"Content-Type": "application/json",}, body: {
+  //     "userName": "Steph",
+  //     "projectGoal": "Build an API for helping people",
+  //     "projectType": "Build",
+  //     "projectTools": "Express",
+  //     "collaborators": "4"
+  // } });
+  //   //const data = await post.json();
+  //  }
+  //  createAPost();
+  //  console.log('useEffect has worked')
+  // }, [])
 
   //JSON.stringify(posts[-1])
 
@@ -65,10 +65,11 @@ function App() {
     {/* <h1 className="title">Sjardin</h1> */}
     <p className="slogan">A collaboration app for learning to code together</p>
     </header>
-    
+    <div className="create-button">
     <button onClick={() => setButtonPopup(true)}>
       Create Post
     </button>
+    </div>
     <div className="navbar">
       <CreatePost handleSubmit={handleSubmit} trigger={buttonPopup} setTrigger={setButtonPopup}/>
       <SearchBar posts={posts} setPosts={setPosts}/>
