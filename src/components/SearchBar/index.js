@@ -12,19 +12,22 @@ function SearchBar({posts}) {
 
     return <div className="searchBar">
 
-        <label htmlFor="categories">I want to</label>
+        <label htmlFor="categories">I want to </label>
 
-        <select name="categories" id="categories">
+        <select className="categoriesBar" name="categories" id="categories">
             <option value="build">build</option>
             <option value="study">study</option>
             <option value="pair">pair</option>
         </select>
         <br/>
+        <br/>
         <label> using...</label>
         <br/>
+        <br/>
+
             <input type="checkbox" id="css" name="css" value="css"/>
 
-            <label htmlFor="css">CSS</label>
+            <label htmlFor="css">CSS</label><br/>
             <input type="checkbox" id="express" name="express" value="express"/>
             <label htmlFor="vehicle2">Express</label><br/>
             <input type="checkbox" id="html" name="html" value="html"/>
@@ -36,9 +39,11 @@ function SearchBar({posts}) {
             <input type="checkbox" id="sql" name="sql" value="sql"/>
             <label htmlFor="vehicle3">SQL</label><br/>
             <input type="checkbox" id="react" name="react" value="react"/>
-            <label htmlFor="vehicle3">React</label><br/>
-
-        <button onClick={handleClick}>Find me a seed</button>
+            <label htmlFor="vehicle3">React</label>
+        <div ><br/>
+            <button className="searchButton" onClick={handleClick}>Find me a buddy</button>
+        </div>
+        <br/>
     </div>
 }
 export default SearchBar;

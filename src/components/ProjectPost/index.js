@@ -3,7 +3,7 @@ import '../App/App.css'
 function ProjectPost({projectgoal, projecttype, projecttools, username}) {
     return <div className="projectPost">
     <header>
-        <h3>{projecttype}</h3>
+        <h3 class="projectType">{projecttype}</h3>
     </header>
     <article>
         <div className="projectgoal">Project Title: {projectgoal}</div>

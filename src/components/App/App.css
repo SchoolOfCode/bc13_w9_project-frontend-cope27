@@ -1,18 +1,33 @@
 .App {
-  background-color: #f6ae2d;
+  background-color: #FFFDF7;
 }
 
 /* text-align: center; */
 
+
 .create-button {
   text-align: center;
   justify-content: center;
-}
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+} 
 
 .title {
   color: #34623F;
   text-align: center;
-  font-family: "monospace";
+  font-family: helevetica;
   font-size: 78px
 }
 
@@ -27,8 +42,29 @@
 .slogan {
   color: black;
   text-align: center;
-  font-style: italic;
+  font-family: helvetica;
   font-size: 24px;
+  background-color: #F6AE2D;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+}
+
+.close-btn {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 /* changes searchbar */
@@ -40,15 +76,56 @@
 
 /* font style, spacing, color, button elements */
 .searchBar{
-  background-color: #F97068;
+  background-color: #F6AE2D;
   align-items: center;
   width:200px;
-  padding:20px;
   align-items: left;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+}
+
+.searchButton {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.popup-inner .submitButton {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.categoriesBar {
+  font-family: helvetica;
+
 }
 
 .createPost {
-  background-color: #fff;
+  background-color: #34623F;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,13 +137,68 @@
   opacity: 1;
 }
 
+/* .popup-inner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  opacity: 1;
+  max-width: 640px;
+  background-color: #F6AE2D;
+}
+
+.popup-inner .close-btn {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+} */
+
+.projectPost {
+  background-color: #F6AE2D;
+  min-height: 30vh;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #000;
+  border-style: solid;
+  margin: 10px;
+  padding: 0.25em 0.5em;
+  border-radius: 25%;
+  font-family: helvetica;
+}
+
+
+/* .projectType 
+
+.projectGoal
+
+.projectTools
+
+.userName */
+
+.projectBoard {
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #6B9080;
+}
+
 .popup-inner {
   position: relative;
   padding: 32px;
   width: 100%;
   opacity: 1;
   max-width: 640px;
-  background-color: #34623F;
+  background-color: #F6AE2D;
+  
 }
 
 .popup-inner .close-btn {
@@ -75,26 +207,40 @@
   right: 16px;
 }
 
-.projectPost {
-  background-color: #D9CABC;
-  min-height: 30vh;
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  border-style: solid;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 25%;
+
+/*
+
+<!-- HTML !-->
+<button class="button-54" role="button">Button 54</button>
+
+
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.projectBoard {
-  display: flex;
-  margin: 30px;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
 }
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+*/

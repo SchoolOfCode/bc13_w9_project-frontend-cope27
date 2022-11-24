@@ -47,16 +47,16 @@ function CreatePost({handleSubmit, trigger, setTrigger}) {
     <div className="createPost">
         <div className="popup-inner">
             <h2>Where would you like to grow?</h2>
-            <label htmlFor="categories">Plant a Seed:</label>
+            <label htmlFor="categories">Plant a Seed: </label>
             <select name="categories" id="categories" onChange={handleProjectType}>
                 <option value="Build">Build</option>
                 <option value="Study">Study</option>
                 <option value="Pair">Pair</option>
             </select><br/>
 
-            <label>Project Goal</label>
+            <label>Project Goal: </label>
             <input type="text" onChange={handleProjectGoal}></input><br/>
-            <label htmlFor="Tools">Tool I'll be using</label>
+            <label htmlFor="Tools">Tool I'll be using: </label>
             <select name="Tools" id="Tools" onChange={handleProjectTools}>
                 <option value="CSS">CSS</option>
                 <option value="HTML">HTML</option>  
@@ -68,9 +68,11 @@ function CreatePost({handleSubmit, trigger, setTrigger}) {
 
             <label>Username: </label><input type="text" onChange={handleUsername}></input><br/>
 
-            <button onClick={() => {
+
+            <button className= "submitButton" onClick={() => {
                 handleSubmit(postObject) 
                 setTrigger(false)}}>SUBMIT</button><br />
+                
             <button className="close-btn" onClick={() => setTrigger(false)}>Cancel</button>
         </div>
     </div>
