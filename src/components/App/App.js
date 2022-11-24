@@ -2,7 +2,7 @@ import './App.css';
 import CreatePost from '../CreatePost/index.js'
 import SearchBar from '../SearchBar/index.js'
 import ProjectBoard from '../ProjectBoard/index.js'
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import samplePosts from '../../data/samplePosts';
 import logo from '../../sjardin-logo-css.svg'
 //import cors from 'cors';
@@ -20,6 +20,7 @@ function App() {
   const [buttonPopup, setButtonPopup] = useState(false);
   const [newPost, setNewPost] = useState({});
   const [toggle, setToggle] = useState(false);
+  const [initArray, setInitArray] = useState([]);
   
   useEffect(() => {
     async function getAllposts() {
@@ -29,6 +30,7 @@ function App() {
      setPosts([...data.payload]);
      (console.log("The data loaded: ", data))
      console.log("The posts state: ", posts)
+     setInitArray([...data.payload]);
     }
     getAllposts();
   }, []);
@@ -88,6 +90,33 @@ function App() {
     console.log("handleSubmit postObject: ", postObject)
   }
 
+  function handleClick(searchObject) {
+    // update the array posts variable
+    // filter over the array by checking where searchObject.tools === post.tool & searchObject.type === post.type
+    console.log(initArray)
+    const newArray = initArray.filter((post) => {
+      return post.projecttools === searchObject.tool || post.projecttype === searchObject.type;
+    })
+    setPosts([...newArray])
+  }
+
+  /*  we want to change the state of posts based on the input values of the search bar component
+  Dataflow:
+    - search bar sends data > app (project board gets rerendered automatically)
+  Data needed:
+    - projecttype 
+    - projecttools
+    - We'll need to send an object state variable that contains these two keyvalues
+
+  // App level
+    - we need a function to handle the handleSearch event which sets and filters the array posts this.state.
+  fu
+  // search bar level we need a state variable of an object that is listening out for changes of the users input in the search bar
+
+  CATCH CLAUSE:
+  - when the filter array is applied, check if object values are null to see whether the function should be applied
+  */
+
   return (
     <div className="App">
     <header>
@@ -104,7 +133,7 @@ function App() {
 
     </div>
     <div className="navbar">
-      <SearchBar posts={posts} setPosts={setPosts}/>
+      <SearchBar posts={posts} setPosts={setPosts} handleClick={handleClick}/>
     </div>
     <div>
     <ProjectBoard posts={posts}/>
