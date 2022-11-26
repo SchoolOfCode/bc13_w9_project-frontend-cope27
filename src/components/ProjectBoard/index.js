@@ -1,44 +1,19 @@
 import ProjectPost from '../ProjectPost/index.js'
 import '../App/App.css'; 
-//import samplePosts from '../../data/samplePosts'
-
-// We import state from App and render the current state in the board
 
 function ProjectBoard({posts}) {
     return <div className="projectBoard">
-
-        {
-            /*
-            We need a reduce perhaps here
-            */
-        }
-
         {posts.map( (post) => 
         <ProjectPost projectgoal={post.projectgoal} projecttype={post.projecttype} 
             projecttools={post.projecttools} username = {post.username} key={post.id}/>
             )
         }
-
-
-        
-
-        {/* <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08" background-color="#CAB39F"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08" background-color="#CAB39F"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08" background-color="#CAB39F"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/>
-        <ProjectPost  projectGoal="Lord of the Rings API" projecttype="Build" projecttools="React" username="Jimmy08"/> */}
-
-       {/* <ProjectPost projectGoal="" projecttype="" projecttools="" username=""/>
-        <ProjectPost projectGoal="" projecttype="" projecttools="" username=""/> */}
     </div>
 }
+
 export default ProjectBoard;  
 
-/*
+/* Old code that did not work - useful for reflection
 {
         id: 1,
         username: 'Jimmy08',
