@@ -47,8 +47,8 @@ test("that search bar is rendered", () => {
 });
 
 test("that the project board is rendered", () => {
-  render(<App />);
-  const projectBoard = screen
+  const {container} = render(<App />);
+  const projectBoard = container.getElementsByClassName('projectBoard');
   expect(projectBoard).toBeInTheDocument();
   expect(projectBoard).toBeVisible();
 });
