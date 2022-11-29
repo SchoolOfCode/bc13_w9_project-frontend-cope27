@@ -57,6 +57,10 @@ function App() {
     // THIS DEPENDENCY DOES NOT WORK ON A DELETE REQUEST
   }, [newPost]);
 
+  /** handleSubmit takes in the postObject by the users in CreatePost and updates the state variable newPost
+   * 
+   * @param {*} postObject 
+   */
   function handleSubmit(postObject) {
     console.log("You clicked postObject");
     setToggle(true);
@@ -91,6 +95,8 @@ function App() {
           Create Post
         </button>
       </div>
+      {/* This div below is purely for testing. Potentially app interfering so please delete if render is not as expected. */}
+      <div role="article"></div>
       <div className="navbar">
         <SearchBar
           posts={posts}

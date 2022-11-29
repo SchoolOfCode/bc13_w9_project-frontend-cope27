@@ -46,9 +46,16 @@ test("that search bar is rendered", () => {
   expect(searchBar).toBeVisible();
 });
 
-test("that the project board is rendered", () => {
+test("that the project board is rendered", async () => {
   render(<App />);
-  const projectBoard = screen
+  let projectBoard = await screen.findByTestId('Project Board')
+  console.log(projectBoard)
   expect(projectBoard).toBeInTheDocument();
   expect(projectBoard).toBeVisible();
+});
+
+test("experimental div is rendered", () => {
+  render(<App/>);
+  let div = screen.getByRole('article');
+  expect(div).toBeInTheDocument();
 });

@@ -3,7 +3,7 @@ import "../App/App.css";
 
 function ProjectBoard({ posts }) {
   return (
-    <div className="projectBoard">
+    <ul className="projectBoard" data-testid="Project Board">
       {posts.map((post) => (
         <ProjectPost
           projectgoal={post.projectgoal}
@@ -13,7 +13,7 @@ function ProjectBoard({ posts }) {
           key={post.id}
         />
       ))}
-    </div>
+    </ul>
   );
 }
 
