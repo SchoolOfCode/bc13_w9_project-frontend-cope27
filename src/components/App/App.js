@@ -12,8 +12,8 @@ function App() {
   const [toggle, setToggle] = useState(false);
   const [searchObject, setSearchObject] = useState({
     all: true,
-    projectTool: "",
-    projectType: "",
+    projectTool: "Build",
+    projectType: "CSS",
   });
 
   // projectboard takes an if condition in its render (conditional ternary operator?)
@@ -44,7 +44,7 @@ function App() {
       console.log("The posts state: ", posts);
     }
     getAllposts();
-  }, []);
+  }, [posts]);
 
   /** POST request upon the user creating a newPost (which is the useEffect's dependency)
    *
