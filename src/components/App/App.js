@@ -19,17 +19,16 @@ function App() {
   // projectboard takes an if condition in its render (conditional ternary operator?)
   // if searchObject all === true, we return posts.map
   // else
-    // Have project board .filter.map the posts array based on SearchFilterObject
-  
+  // Have project board .filter.map the posts array based on SearchFilterObject
+
   // App needs to have the searchObject state DONE
   // searchBar has one state an object (tool and type) which update onchange in the return () DONE
   // searchBar needs to send the updated values via prop on handleClick so that app.js the handleClick function update the searchObject DONE
 
   // get rid of all instances of initialGetArray
 
-
   /** GET request from database on mount of the app
-   * 
+   *
    */
   useEffect(() => {
     async function getAllposts() {
@@ -48,7 +47,7 @@ function App() {
   }, []);
 
   /** POST request upon the user creating a newPost (which is the useEffect's dependency)
-   * 
+   *
    */
   useEffect(() => {
     if (toggle) {
@@ -78,8 +77,8 @@ function App() {
   }, [newPost]);
 
   /** handleSubmit takes in the postObject by the users in CreatePost and updates the state variable newPost
-   * 
-   * @param {*} postObject 
+   *
+   * @param {*} postObject
    */
   function handleSubmit(postObject) {
     console.log("You clicked postObject");
@@ -89,11 +88,23 @@ function App() {
   }
 
   /**handleClick takes in the filterValue object from searchBar which keys are then used to update the searchObject which is used by ProjectBoard to re-render a filtered list
-   * 
-   * @param {*} searchObject 
+   *
+   * @param {*} searchObject
    */
   function handleClick(filterValues) {
-    setSearchObject({...searchObject, all: false, projectTool: filterValues.projectTool, projectType: filterValues.projectType})
+    setSearchObject({
+      ...searchObject,
+      all: false,
+      projectTool: filterValues.projectTool,
+      projectType: filterValues.projectType,
+    });
+  }
+
+  function handleClickReset() {
+    setSearchObject({
+      ...searchObject,
+      all: true,
+    });
   }
 
   return (
@@ -115,12 +126,13 @@ function App() {
       {/* This div below is purely for testing. Potentially app interfering so please delete if render is not as expected. */}
       <div role="article"></div>
       <div className="navbar">
-        <SearchBar 
-          handleClick={handleClick} 
-          />
+        <SearchBar
+          handleClick={handleClick}
+          handleClickReset={handleClickReset}
+        />
       </div>
       <div>
-        <ProjectBoard posts={posts} searchObject={searchObject}/>
+        <ProjectBoard posts={posts} searchObject={searchObject} />
       </div>
       <div>
         <CreatePost
