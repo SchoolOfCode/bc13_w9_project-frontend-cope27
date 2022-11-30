@@ -1,4 +1,10 @@
 import { useState } from "react";
+/** Renders the SearchBar component.
+ *  A state variable captures type (category) and tool, takes in handleclick function as prop that triggers the search.
+ *
+ * @param {*} handleClick prop
+ * @returns JSX
+ */
 
 function SearchBar({ handleClick }) {
   const [searchObject, setSearchObject] = useState({
@@ -6,11 +12,14 @@ function SearchBar({ handleClick }) {
     type: "Build",
   });
 
+
   /* handle/functions/ listen for user input and update searchObject accordingly */
+
   function handleToolChange(e) {
     setSearchObject({ ...searchObject, tool: e.target.value });
   }
 
+  
   function handleProjectTypeChange(e) {
     setSearchObject({ ...searchObject, type: e.target.value });
   }
@@ -55,5 +64,4 @@ function SearchBar({ handleClick }) {
     </div>
   );
 }
-
 export default SearchBar;
