@@ -73,7 +73,7 @@ function App() {
       console.log("CreateAPost useEffect has worked");
       setToggle(false);
     } else {
-      console.log("Toggle is false! Hahah.");
+      console.log("Unexpected error - check if toggle is false");
     }
   }, [newPost]);
 
