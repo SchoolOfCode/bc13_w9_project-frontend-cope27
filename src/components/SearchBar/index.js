@@ -6,10 +6,22 @@ import { useState } from "react";
  * @returns JSX
  */
 
-function SearchBar({ handleClick }) {
+/* PLAN
+Add two extra options to each menu which would be default, text would be "All". 
+  Value would be 'All' -- if value is true, set searchObject.all to true
+
+Add to the logic in App.   
+
+
+*/
+
+function SearchBar({ handleClick, handleClickReset }) {
   /** The reason for this state instead of using searchObject handed down as a prop is to stop unneccesary rerenders when user events happen */
-  const [filterValues, setFilterValues] = useState({projectType: '', projectTool: ''});
-  
+  const [filterValues, setFilterValues] = useState({
+    projectType: "",
+    projectTool: "",
+  });
+
   function handleProjectToolChange(e) {
     setFilterValues({ ...filterValues, projectTool: e.target.value });
   }
@@ -20,7 +32,6 @@ function SearchBar({ handleClick }) {
 
   return (
     <div className="searchBar">
-    
       <label htmlFor="categories">I want to </label>
       <select
         name="categories"
@@ -35,7 +46,7 @@ function SearchBar({ handleClick }) {
 
       <br />
       <label> using...</label>
-      <select name="tools" id="tools" onChange={ handleProjectToolChange}>
+      <select name="tools" id="tools" onChange={handleProjectToolChange}>
         <option value="CSS">CSS</option>
         <option value="HTML">HTML</option>
         <option value="Express">Express</option>
@@ -52,6 +63,14 @@ function SearchBar({ handleClick }) {
           onClick={() => handleClick(filterValues)}
         >
           Find me a buddy
+        </button>
+
+        <button
+          className="searchButton"
+          id="reset"
+          onClick={() => handleClickReset()}
+        >
+          Reset
         </button>
       </div>
       <br />
