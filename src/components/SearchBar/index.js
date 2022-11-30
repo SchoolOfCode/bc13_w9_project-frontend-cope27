@@ -6,6 +6,7 @@ function SearchBar({ handleClick }) {
     type: "Build",
   });
 
+  /* handle/functions/ listen for user input and update searchObject accordingly */
   function handleToolChange(e) {
     setSearchObject({ ...searchObject, tool: e.target.value });
   }
@@ -16,6 +17,7 @@ function SearchBar({ handleClick }) {
 
   return (
     <div className="searchBar">
+    
       <label htmlFor="categories">I want to </label>
       <select
         name="categories"
@@ -27,6 +29,7 @@ function SearchBar({ handleClick }) {
         <option value="Pair">Pair</option>
       </select>
       <br />
+
       <br />
       <label> using...</label>
       <select name="tools" id="tools" onChange={handleToolChange}>
@@ -38,6 +41,7 @@ function SearchBar({ handleClick }) {
         <option value="SQL">SQL</option>
         <option value="React">React</option>
       </select>
+
       <div>
         <br />
         <button
