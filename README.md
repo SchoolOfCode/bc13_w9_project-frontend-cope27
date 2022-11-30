@@ -71,5 +71,3 @@ No currently known bugs. Please contact our support team if you find any.
 ## Acknowledgements
 
 - [Coaches@SchoolOfCode](https://www.schoolofcode.co.uk/)
-
-This is a Cope27 production mistake.
