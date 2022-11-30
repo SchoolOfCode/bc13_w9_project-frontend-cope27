@@ -7,21 +7,15 @@ import { useState } from "react";
  */
 
 function SearchBar({ handleClick }) {
-  const [searchObject, setSearchObject] = useState({
-    tool: "CSS",
-    type: "Build",
-  });
-
-
-  /* handle/functions/ listen for user input and update searchObject accordingly */
-
-  function handleToolChange(e) {
-    setSearchObject({ ...searchObject, tool: e.target.value });
+  /** The reason for this state instead of using searchObject handed down as a prop is to stop unneccesary rerenders when user events happen */
+  const [filterValues, setFilterValues] = useState({projectType: '', projectTool: ''});
+  
+  function handleProjectToolChange(e) {
+    setFilterValues({ ...filterValues, projectTool: e.target.value });
   }
 
-  
   function handleProjectTypeChange(e) {
-    setSearchObject({ ...searchObject, type: e.target.value });
+    setFilterValues({ ...filterValues, projectType: e.target.value });
   }
 
   return (
@@ -41,7 +35,7 @@ function SearchBar({ handleClick }) {
 
       <br />
       <label> using...</label>
-      <select name="tools" id="tools" onChange={handleToolChange}>
+      <select name="tools" id="tools" onChange={ handleProjectToolChange}>
         <option value="CSS">CSS</option>
         <option value="HTML">HTML</option>
         <option value="Express">Express</option>
@@ -55,7 +49,7 @@ function SearchBar({ handleClick }) {
         <br />
         <button
           className="searchButton"
-          onClick={() => handleClick(searchObject)}
+          onClick={() => handleClick(filterValues)}
         >
           Find me a buddy
         </button>
@@ -64,4 +58,5 @@ function SearchBar({ handleClick }) {
     </div>
   );
 }
+
 export default SearchBar;
