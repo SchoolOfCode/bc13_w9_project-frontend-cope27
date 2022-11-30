@@ -51,12 +51,12 @@ Please note that in order to have data listed you will need to setup a database 
     
 ## Documentation
 
-[Documentation](https://linktodocumentation)
+<img src="./src/sjardin-screenshot.png" alt='Sjardin-Screenshot-App' width='600'>
 
 Below is a list of tools along with documentation that was used to create the app:
 - [Miro](https://miro.com/app/board/uXjVPCPBqb8=/)
 - [Excalidraw](https://excalidraw.com/#room=299b18820ca034efea3c,srwTKkUjV38wWKCfgzaoAA)
-
+- [Mural](https://app.mural.co/t/craigmuralspace8926/m/craigmuralspace8926/1669026888673/3a1aafa597c4420e6b2a0ce870d0528f29e2ff41?sender=craiggrady5730)
 
 ## Running Tests
 

@@ -7,11 +7,11 @@ function ProjectPost({ projectgoal, projecttype, projecttools, username }) {
         <h3 className="projectType">{projecttype}</h3>
       </header>
       <article>
-        <div className="projectContent">Project Title: {projectgoal}</div>
+        <div className="projectContent"><b>Project Title:</b> {projectgoal}</div>
         <div className="projectContent">
-          The tools I want to use: {projecttools}
+          <b>The tools I want to use:</b> {projecttools}
         </div>
-        <div className="projectContent">username: {username}</div>
+        <div className="projectContent"><b>Username:</b> {username}</div>
       </article>
     </li>
   );
