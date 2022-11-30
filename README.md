@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Sjardin
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An app to finds other coders to collaborate with, whether that is to build, study or pair program.
+Users can post a project they wish to work on and details about that project. Other users can do the same or search for projects in which they can contact users and collaborate with them.
 
-## Available Scripts
+This front-end app is built in React.js utilising Node.js. 
 
-In the project directory, you can run:
+**Created 11.2022**
 
-### `npm start`
+Front-end repository here:
+https://github.com/SchoolOfCode/bc13_w9_project-frontend-cope27
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Back-end repository here:
+https://github.com/SchoolOfCode/bc13_w9_project-backend-cope27
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Authors
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- @Craig Grady | https://github.com/CregCodes
+- @Colin Fraser | https://github.com/dubhais 
+- @Stephanie Njeri | https://github.com/stephaniezai
+- @Fenton Hutson | https://github.com/FentonPlusPlus 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Current features available in the app:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Post a Project
+- Search for a Project by filters
+- View All Projects
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install Sjardin by cloning the repository to a local folder and then installing the npm package.
+You can install the npm package by running npm i as shown below:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  cd repository-location
+  npm install 
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+You can then run the app by with the script npm run start:
 
-## Learn More
+```bash
+  npm run start
+``` 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Please note that in order to have data listed you will need to setup a database which needs to be linked in the back-end repository.
+    
+## Documentation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[Documentation](https://linktodocumentation)
 
-### Code Splitting
+Below is a list of tools along with documentation that was used to create the app:
+- [Miro](https://miro.com/app/board/uXjVPCPBqb8=/)
+- [Excalidraw](https://excalidraw.com/#room=299b18820ca034efea3c,srwTKkUjV38wWKCfgzaoAA)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+## Running Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+To run tests, run the following command
 
-### Making a Progressive Web App
+```bash
+  npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Bugs
 
-### Advanced Configuration
+Here is a list of known bugs:
+- Posts created will not display at the beginning of the project board (currently the project board is automatically filtered to show the most recent posts created in the database). The user must refresh the page to see this take effect.
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ - [Coaches@SchoolOfCode](https://www.schoolofcode.co.uk/)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
