@@ -68,8 +68,7 @@ To run tests, run the following command
 
 ## Bugs
 
-Here is a list of known bugs:
-- Posts created will not display at the beginning of the project board (currently the project board is automatically filtered to show the most recent posts created in the database). The user must refresh the page to see this take effect.
+No currently known bugs. Please contact our support team if you find any.
 ## Acknowledgements
 
  - [Coaches@SchoolOfCode](https://www.schoolofcode.co.uk/)

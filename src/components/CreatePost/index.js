@@ -6,8 +6,8 @@ function CreatePost({ handleSubmit, trigger, setTrigger }) {
     id: null,
     username: "",
     projectgoal: "",
-    projecttype: "",
-    projecttools: "",
+    projecttype: "Build",
+    projecttools: "CSS",
     collaborators: null,
   });
 
