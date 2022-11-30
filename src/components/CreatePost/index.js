@@ -11,6 +11,7 @@ function CreatePost({ handleSubmit, trigger, setTrigger }) {
     collaborators: null,
   });
 
+  /* handle/functions/ here listen out for the user input and update the postObject accordingly */
   function handleUsername(e) {
     console.log(e.target.value);
     setPostObject({ ...postObject, username: e.target.value });

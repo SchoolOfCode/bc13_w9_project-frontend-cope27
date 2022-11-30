@@ -12,24 +12,21 @@ function SearchBar({ handleClick }) {
     type: "Build",
   });
 
-  /**
-   * This takes an event when the tool menu is selected and changes the tool key of the searchObject state
-   * @param {*} e
-   */
+
+  /* handle/functions/ listen for user input and update searchObject accordingly */
+
   function handleToolChange(e) {
     setSearchObject({ ...searchObject, tool: e.target.value });
   }
 
-  /**
-   * This takes an event when the Project Type menu is selected and changes the type key of the searchObject state
-   * @param {*} e
-   */
+  
   function handleProjectTypeChange(e) {
     setSearchObject({ ...searchObject, type: e.target.value });
   }
 
   return (
     <div className="searchBar">
+    
       <label htmlFor="categories">I want to </label>
       <select
         name="categories"
@@ -41,6 +38,7 @@ function SearchBar({ handleClick }) {
         <option value="Pair">Pair</option>
       </select>
       <br />
+
       <br />
       <label> using...</label>
       <select name="tools" id="tools" onChange={handleToolChange}>

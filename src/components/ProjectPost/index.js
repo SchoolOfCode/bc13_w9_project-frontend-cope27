@@ -2,7 +2,7 @@ import "../App/App.css";
 
 function ProjectPost({ projectgoal, projecttype, projecttools, username }) {
   return (
-    <div className="projectPost">
+    <li className="projectPost">
       <header>
         <h3 className="projectType">{projecttype}</h3>
       </header>
@@ -13,7 +13,7 @@ function ProjectPost({ projectgoal, projecttype, projecttools, username }) {
         </div>
         <div className="projectContent">username: {username}</div>
       </article>
-    </div>
+    </li>
   );
 }
 

@@ -12,6 +12,9 @@ function App() {
   const [toggle, setToggle] = useState(false);
   const [initialGetArray, setInitialGetArray] = useState([]);
 
+  /** GET request from database on mount of the app
+   * 
+   */
   useEffect(() => {
     async function getAllposts() {
       let response = await fetch("http://localhost:3005/api/posts", {
@@ -29,6 +32,9 @@ function App() {
     getAllposts();
   }, []);
 
+  /** POST request upon the user creating a newPost (which is the useEffect's dependency)
+   * 
+   */
   useEffect(() => {
     if (toggle) {
       async function createAPost(newPost) {
@@ -54,9 +60,12 @@ function App() {
     } else {
       console.log("Toggle is false! Hahah.");
     }
-    // THIS DEPENDENCY DOES NOT WORK ON A DELETE REQUEST
   }, [newPost]);
 
+  /** handleSubmit takes in the postObject by the users in CreatePost and updates the state variable newPost
+   * 
+   * @param {*} postObject 
+   */
   function handleSubmit(postObject) {
     console.log("You clicked postObject");
     setToggle(true);
@@ -64,6 +73,10 @@ function App() {
     console.log("handleSubmit postObject: ", postObject);
   }
 
+  /**handleClick takes in an object which keys are then used as filter parameters so the project board can be updated with relevant requested search
+   * 
+   * @param {*} searchObject 
+   */
   function handleClick(searchObject) {
     console.log(initialGetArray);
     const newArray = initialGetArray.filter((post) => {
@@ -81,7 +94,7 @@ function App() {
         <div className="logo">
           <img id="standard-green-logo" src={logo} alt="Sjardin-logo" />
         </div>
-        {/* <h1 className="title">Sjardin</h1> */}
+        {/* <h1 className="title">Sjardin</h1> // h1 element removed in favour of logo image */}
         <p className="slogan">
           A collaboration app for learning to code together
         </p>
@@ -91,6 +104,8 @@ function App() {
           Create Post
         </button>
       </div>
+      {/* This div below is purely for testing. Potentially app interfering so please delete if render is not as expected. */}
+      <div role="article"></div>
       <div className="navbar">
         <SearchBar
           posts={posts}
