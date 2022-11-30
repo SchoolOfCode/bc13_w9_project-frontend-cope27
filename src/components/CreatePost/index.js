@@ -74,8 +74,8 @@ function CreatePost({ handleSubmit, trigger, setTrigger }) {
         <button className="close-btn" onClick={() => setTrigger(false)}>
           Cancel
         </button>
-      </div>
-    </div>
+  </div>
+   </div>
   ) : (
     ""
   );

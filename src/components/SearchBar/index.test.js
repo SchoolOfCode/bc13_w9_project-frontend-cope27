@@ -14,13 +14,12 @@ describe("SearchBar functions", () => {
     // select 'Build'
     // expect that Build is selected
     // expect that Pair and Study are not selected
-
-    const menuValue = "Build";
+    
+    // const menuValue = "Build";
     render(<SearchBar />);
 
     //const menu = screen.getByRole("combobox");
-    const menuItem = screen.getByRole("option", { value: "Build" });
-
+    const menuItem = screen.getByRole("option", { name: "Build" });
     expect(menuItem).toBeInTheDocument();
   });
 });
