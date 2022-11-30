@@ -16,17 +16,6 @@ function App() {
     projectType: "CSS",
   });
 
-  // projectboard takes an if condition in its render (conditional ternary operator?)
-  // if searchObject all === true, we return posts.map
-  // else
-  // Have project board .filter.map the posts array based on SearchFilterObject
-
-  // App needs to have the searchObject state DONE
-  // searchBar has one state an object (tool and type) which update onchange in the return () DONE
-  // searchBar needs to send the updated values via prop on handleClick so that app.js the handleClick function update the searchObject DONE
-
-  // get rid of all instances of initialGetArray
-
   /** GET request from database on mount of the app
    *
    */
