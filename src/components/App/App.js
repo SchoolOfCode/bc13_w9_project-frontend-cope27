@@ -2,6 +2,7 @@ import './App.css';
 import CreatePost from '../CreatePost/index.js'
 import SearchBar from '../SearchBar/index.js'
 import ProjectBoard from '../ProjectBoard/index.js'
+import Comments from '../Comments/comments.js'
 import { useState, useEffect, useRef } from 'react';
 import samplePosts from '../../data/samplePosts';
 import logo from '../../sjardin-logo-css.svg'
@@ -134,14 +135,16 @@ function App() {
     </div>
     <div className="navbar">
       <SearchBar posts={posts} setPosts={setPosts} handleClick={handleClick}/>
+      <Comments />
     </div>
     <div>
     <ProjectBoard posts={posts}/>
-    
+   
     </div>
     <div><CreatePost handleSubmit={handleSubmit} trigger={buttonPopup} setTrigger={setButtonPopup}/></div>
     </div>
     
+   
   );
 }
 
