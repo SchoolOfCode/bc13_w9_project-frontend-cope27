@@ -1,30 +1,65 @@
+import { useState } from "react";
 
-function Comments() {
-  return (<>
-    
-    <div className="post">
-        <h1>Post Goes here</h1>
+function Comments({ toggle }) {
+  // state for comments= array
+  //map into comments container comments relevant to post from database
+
+  //comment structure
+  // username & comment
+  const initialCommentContent = [
+    { commentId: 1, userName: "FentonCodes", comment: "Absloute slander" },
+    { commentId: 2, userName: "CregCodes", comment: "Absloute(ly) lost" },
+    { commentId: 3, userName: "ColinCodes", comment: "Love Auth0" },
+  ];
+
+  const [commentObject, setCommentObject] = useState({
+    userName: "anon",
+    comment: "",
+  });
+  const [commentContent, setCommentContent] = useState(initialCommentContent);
+
+  function handleChange(e) {
+    setCommentObject({ ...commentObject, comment: e.target.value });
+  }
+
+  return (
+    <div className="popup-inner">
+      <div className="comment">
+        <h1 className="post-render">POST</h1>
+        <div className="comment-feed">
+          {commentContent.map((comment) => {
+            return (
+              <div>
+                <p>{comment.userName}</p> <p> {comment.comment}</p>
+              </div>
+            );
+          })}
+        </div>
+        <textarea
+          onChange={handleChange}
+          className="text-area"
+          rows="4"
+          columns="80"
+        ></textarea>
+        <button
+          className="submit-button"
+          onClick={() => {
+            setCommentContent([...commentContent, commentObject]);
+          }}
+        >
+          submit
+        </button>
+        <button
+          className="cancel-button"
+          onClick={() => {
+            toggle(false);
+          }}
+        >
+          cancel
+        </button>
+      </div>
     </div>
-
-    <div className="comments-container">
-       
-       <div className="comment">
-           <h1>Username</h1>
-           <p>orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It wa</p>
-       </div>
-   </div>
-
-    <div className="newComment">
-        
-        <label >Username</label>
-        <input name="username" type="text"/>
-        <label >Your comment:</label>
-        <textarea id="commentText" name="commentText" rows="4" cols="80">
-        </textarea>
-        <button onClick={console.log("Submit pressed")}>Submit</button>
-    </div>
-</>
-  )
+  );
 }
 
 export default Comments;

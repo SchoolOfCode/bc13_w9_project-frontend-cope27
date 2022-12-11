@@ -1,25 +1,36 @@
-import '../App/App.css'
+import "../App/App.css";
+import Comments from "../Comments/comments";
+import { useState } from "react";
 
-function ProjectPost({projectgoal, projecttype, projecttools, username}) {
-    return <div className="projectPost">
-    <header>
+function ProjectPost({ projectgoal, projecttype, projecttools, username }) {
+  const [commentsToggle, setCommentsToggle] = useState(false);
+
+  return (
+    <div className="projectPost">
+      <header>
         <h3 className="projectType">{projecttype}</h3>
-    </header>
-    <article>
+      </header>
+      <article>
         <div className="projectContent">Project Title: {projectgoal}</div>
 
-        <div className="projectContent">The tools I want to use: {projecttools}</div>
+        <div className="projectContent">
+          The tools I want to use: {projecttools}
+        </div>
 
         <div className="projectContent">username: {username}</div>
-    </article>
-
-
-
+        <button
+          onClick={() => {
+            setCommentsToggle(true);
+          }}
+        >
+          Create Comment
+        </button>
+      </article>
+      {commentsToggle && <Comments toggle={setCommentsToggle} />}
     </div>
+  );
 }
-export default ProjectPost; 
-
-
+export default ProjectPost;
 
 /*
 
