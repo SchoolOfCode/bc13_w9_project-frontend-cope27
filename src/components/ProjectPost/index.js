@@ -19,6 +19,7 @@ function ProjectPost({ projectgoal, projecttype, projecttools, username }) {
 
         <div className="projectContent">username: {username}</div>
         <button
+          className="submit-button"
           onClick={() => {
             setCommentsToggle(true);
           }}
