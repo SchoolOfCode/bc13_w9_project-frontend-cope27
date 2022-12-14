@@ -2,8 +2,11 @@ import "../App/App.css";
 import Comments from "../Comments/comments";
 import { useState } from "react";
 
+// props passed from create post component to child
 function ProjectPost({ projectgoal, projecttype, projecttools, username }) {
   const [commentsToggle, setCommentsToggle] = useState(false);
+  // set comments toggle is a new feature- this allows a trigger to display a comment component on a project post element
+  // comment pop up appears if a user clicks the create comment button rendered in this component
 
   return (
     <div className="projectPost">

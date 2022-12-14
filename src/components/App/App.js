@@ -2,9 +2,9 @@ import "./App.css";
 import CreatePost from "../CreatePost/index.js";
 import SearchBar from "../SearchBar/index.js";
 import ProjectBoard from "../ProjectBoard/index.js";
-import Comments from "../Comments/comments.js";
+//import Comments from "../Comments/comments.js";
 import { useState, useEffect, useRef } from "react";
-import samplePosts from "../../data/samplePosts";
+//import samplePosts from "../../data/samplePosts";
 import logo from "../../sjardin-logo-css.svg";
 //import cors from 'cors';
 
@@ -13,12 +13,17 @@ import logo from "../../sjardin-logo-css.svg";
 // when useEffect ends, set toggle to false
 
 function App() {
-  //const [posts, setPosts] = useState(samplePosts); //empty this state when switching to live database
-  const [posts, setPosts] = useState([]);
-  const [buttonPopup, setButtonPopup] = useState(false);
-  const [newPost, setNewPost] = useState({});
-  const [toggle, setToggle] = useState(false);
-  const [initArray, setInitArray] = useState([]);
+  const [posts, setPosts] = useState([]); // empty array (initial 0 posts before retrieved from database)
+  const [buttonPopup, setButtonPopup] = useState(false); // render button that's hidden before tigger of popup
+  const [newPost, setNewPost] = useState({}); // empty object initial state- for post without data entered via input
+  const [toggle, setToggle] = useState(false); // initial state for toggle (for inner pop up input field)
+  const [initArray, setInitArray] = useState([]); //intial state for search state- set to default initially
+
+  /**useEffect function- retrieves all posts from the database
+   * getAllposts- fetch reqyest which retrieves posts entries in database and inserts into array
+   * Array is displayed in project board component- which is rendered in App
+   * getAllPosts is called on mount
+   */
 
   useEffect(() => {
     async function getAllposts() {
@@ -36,6 +41,12 @@ function App() {
     }
     getAllposts();
   }, []);
+
+  /**useEffect (side effects)
+   * createAPost- a function which allows a user to create a post object (ProjectPost)
+   * This item is sent as a POST request to our backend/ database
+   * This in turn triggers the setToggle which will change inner pop up back to default CSS style
+   */
 
   useEffect(() => {
     if (toggle) {
@@ -66,32 +77,24 @@ function App() {
     // THIS DEPENDENCY DOES NOT WORK ON A DELETE REQUEST
   }, [newPost]);
 
-  //JSON.stringify(posts[-1])
-
-  // Create Route (POST) for creating a new post
-  //create a post
-  //convert stringify data
-
-  // create state and import samplePosts as initial state
-  //const [posts, setPosts] = useState(samplePosts); //empty this state when switching to live database
-
-  // on handleSubmit we wil have a function that spreads out the previous array of postObjects and append the new object
+  /** on handleSubmit we wil have a function that spreads out the previous array of postObjects and append the new object
+   * handleSubmit
+   */
   function handleSubmit(postObject) {
     console.log("You clicked postObject");
     setToggle(true);
     setNewPost(postObject);
-
-    //setPosts([...posts, postObject])
     console.log("handleSubmit postObject: ", postObject);
   }
 
+  /** Function handleclick will change state of search fields to display only posts that meet search criteria */
   function handleClick(searchObject) {
     // update the array posts variable
     // filter over the array by checking where searchObject.tools === post.tool & searchObject.type === post.type
     console.log(initArray);
     const newArray = initArray.filter((post) => {
       return (
-        post.projecttools === searchObject.tool ||
+        post.projecttools === searchObject.tool || // this means OR (logical operator)
         post.projecttype === searchObject.type
       );
     });
@@ -121,7 +124,6 @@ function App() {
         <div className="logo">
           <img id="standard-green-logo" src={logo} alt="Sjardin-logo" />
         </div>
-        {/* <h1 className="title">Sjardin</h1> */}
         <p className="slogan">
           A collaboration app for learning to code together
         </p>
