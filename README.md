@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# bc13_w9_project-frontend-cope27
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sjardin
 
-## Available Scripts
+An app to finds other coders to collaborate with, whether that is to build, study or pair program.
+Users can post a project they wish to work on and details about that project. Other users can do the same or search for projects in which they can contact users and collaborate with them.
 
-In the project directory, you can run:
+This front-end app is built in React.js utilising Node.js.
 
-### `npm start`
+**Created 11.20.22**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Front-end repository here:
+https://github.com/SchoolOfCode/bc13_w9_project-frontend-cope27
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Back-end repository here:
+https://github.com/SchoolOfCode/bc13_w9_project-backend-cope27
 
-### `npm test`
+## Authors
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- @Craig Grady | https://github.com/CregCodes
+- @Colin Fraser | https://github.com/dubhais
+- @Stephanie Njeri | https://github.com/stephaniezai
+- @Fenton Hutson | https://github.com/FentonPlusPlus
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Current features available in the app:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Post a Project
+- Search for a Project by filters
+- View All Projects
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation
 
-### `npm run eject`
+Install Sjardin by cloning the repository to a local folder and then installing the npm package.
+You can install the npm package by running npm i as shown below:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+  cd repository-location
+  npm install
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can then run the app by with the script npm run start:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+  npm run start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Please note that in order to have data listed you will need to setup a database which needs to be linked in the back-end repository.
 
-## Learn More
+## Documentation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="./src/sjardin-screenshot.png" alt='Sjardin-Screenshot-App' width='600'>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Below is a list of tools along with documentation that was used to create the app:
 
-### Code Splitting
+- [Miro](https://miro.com/app/board/uXjVPCPBqb8=/)
+- [Excalidraw](https://excalidraw.com/#room=299b18820ca034efea3c,srwTKkUjV38wWKCfgzaoAA)
+- [Mural](https://app.mural.co/t/craigmuralspace8926/m/craigmuralspace8926/1669026888673/3a1aafa597c4420e6b2a0ce870d0528f29e2ff41?sender=craiggrady5730)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Running Tests
 
-### Analyzing the Bundle Size
+To run tests, run the following command
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  npm run test
+```
 
-### Making a Progressive Web App
+## Bugs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+No currently known bugs. Please contact our support team if you find any.
 
-### Advanced Configuration
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Coaches@SchoolOfCode](https://www.schoolofcode.co.uk/)
