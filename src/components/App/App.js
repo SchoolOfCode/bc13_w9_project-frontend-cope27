@@ -3,7 +3,7 @@ import CreatePost from "../CreatePost/index.js";
 import SearchBar from "../SearchBar/index.js";
 import ProjectBoard from "../ProjectBoard/index.js";
 //import Comments from "../Comments/comments.js";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 //import samplePosts from "../../data/samplePosts";
 import logo from "../../sjardin-logo-css.svg";
 //import cors from 'cors';
