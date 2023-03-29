@@ -21,7 +21,7 @@ function App() {
    */
   useEffect(() => {
     async function getAllposts() {
-      let response = await fetch("https://sjardin-backend-repo.onrender.com", {
+      let response = await fetch("https://sjardin-backend-repo.onrender.com/api/posts", {
         mode: "cors",
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -42,7 +42,7 @@ function App() {
     if (toggle) {
       async function createAPost(newPost) {
         console.log("useEffect postObject from state: ", newPost);
-        const post = await fetch("http://localhost:3005/api/posts", {
+        const post = await fetch("https://sjardin-backend-repo.onrender.com/api/posts", {
           method: "POST",
           mode: "cors",
           headers: {
