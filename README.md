@@ -4,7 +4,7 @@ An app to finds other coders to collaborate with, whether that is to build, stud
 Users can post a project they wish to work on and details about that project. Other users can do the same or search for projects in which they can contact users and collaborate with them.
 
 To view this site, please visit this link:
-www.sjardin-netlify-app.com
+https://sjardin-v1.netlify.app/
 
 This front-end app is built in React.js utilising Node.js.
 
