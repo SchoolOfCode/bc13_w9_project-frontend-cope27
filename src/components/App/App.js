@@ -21,7 +21,7 @@ function App() {
    */
   useEffect(() => {
     async function getAllposts() {
-      let response = await fetch("http://localhost:3005/api/posts", {
+      let response = await fetch("https://sjardin-backend-repo.onrender.com", {
         mode: "cors",
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -33,7 +33,7 @@ function App() {
       console.log("The posts state: ", posts);
     }
     getAllposts();
-  }, [posts]);
+  }, []);
 
   /** POST request upon the user creating a newPost (which is the useEffect's dependency)
    *
